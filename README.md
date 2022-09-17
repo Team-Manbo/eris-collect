@@ -5,6 +5,8 @@ A message, reaction, interaction collector for Eris. (supports v17.x)
 
 This package is a modified version of [Oceanic-Collectors](https://github.com/Nuckyz/oceanic-collectors) to fit with eris.
 
+If you face any problems, join our discord server ([english](https://discord.gg/2ceFz6rYva), [korean](https://discord.gg/vj4hBBmZwP)) for help.
+
 Installing
 ----------
 
