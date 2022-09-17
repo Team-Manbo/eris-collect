@@ -1,0 +1,34 @@
+{
+  "name": "eris-collect",
+  "version": "1.0.2",
+  "description": "A Collector for Eris",
+  "keywords": [
+    "eris",
+    "eris-collector",
+    "collector"
+  ],
+  "author": "Jam-Manbo",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Team-Manbo/eris-collect.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Team-Manbo/eris-collect/issues"
+  },
+  "homepage": "https://github.com/Team-Manbo/eris-collect#readme",
+  "engines": {
+    "node": ">=16.16.0"
+  },
+  "main": "./dist/index.js",
+  "scripts": {
+    "prepare": "tsc"
+  },
+  "peerDependencies": {
+    "eris": "^0.17.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "typescript": "^4.7.4"
+  }
+}
