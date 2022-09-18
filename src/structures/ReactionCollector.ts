@@ -15,6 +15,7 @@ export type ReactionCollectorEndReasons = 'guildDelete' | 'channelDelete' | 'thr
 export class ReactionCollector<T extends Eris.Message> extends Collector<CollectedReaction<T>, ReactionCollectorEndReasons> {
     /**
      * @param client The Eris client to apply the collector on.
+     * @param message The message to apply collector.
      * @param options The collector options.
      */
     public constructor(private client: Eris.Client, private message: T, public options: CollectorOptions<CollectedReaction<T>> = {}) {

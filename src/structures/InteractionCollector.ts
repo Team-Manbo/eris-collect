@@ -2,30 +2,20 @@ import Collector, { CollectorOptions } from './Collector'
 import { ButtonComponentInteraction, SelectMenuComponentInteraction } from '../types'
 import * as Eris from 'eris'
 
-/* Modal NOT supported in Eris v17. */
-
 export type ComponentTypes =
     typeof Eris.Constants.ComponentTypes.BUTTON
     | typeof Eris.Constants.ComponentTypes.SELECT_MENU
-// export type ModalComponentTypes = typeof Eris.Constants.ComponentTypes.TEXT_INPUT
 
 export type InteractionTypes = typeof Eris.Constants.InteractionTypes.MESSAGE_COMPONENT
-// | typeof Eris.Constants.InteractionTypes.MODAL_SUBMIT
 
 export interface MappedComponentTypes {
     [Eris.Constants.ComponentTypes.BUTTON]: ButtonComponentInteraction;
     [Eris.Constants.ComponentTypes.SELECT_MENU]: SelectMenuComponentInteraction;
 }
 
-/*
-export interface MappedModalComponentTypes {
-    [Eris.Constants.ComponentTypes.TEXT_INPUT]: Eris.ModalSubmitInteraction;
-}
-*/
 
 export interface MappedInteractionTypesToComponentTypes {
     [Eris.Constants.InteractionTypes.MESSAGE_COMPONENT]: MappedComponentTypes
-    // [Eris.Constants.InteractionTypes.MODAL_SUBMIT]: MappedModalComponentTypes
 }
 
 export interface InteractionCollectorOptions {
@@ -34,7 +24,7 @@ export interface InteractionCollectorOptions {
     /** The guild to listen to interactions from. */
     guild?: Eris.Guild
     /** The interaction response to listen to message component interactions from. */
-    interaction?: Eris.AutocompleteInteraction | Eris.CommandInteraction | Eris.CommandInteraction
+    interaction?: Eris.AutocompleteInteraction | Eris.CommandInteraction | Eris.ComponentInteraction
     /** The message to listen to interactions from. */
     message?: Eris.Message
 }

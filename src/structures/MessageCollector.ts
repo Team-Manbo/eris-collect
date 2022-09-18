@@ -6,6 +6,7 @@ export type MessageCollectorEndReasons = 'guildDelete' | 'channelDelete' | 'thre
 export class MessageCollector<T extends Eris.TextChannel> extends Collector<Eris.Message<T>, MessageCollectorEndReasons> {
     /**
      * @param client The Eris client to apply the collector on.
+     * @param channel The channel to collect messages
      * @param options The collector options.
      */
     public constructor(private client: Eris.Client, private channel: T, public options: CollectorOptions<Eris.Message<T>> = {}) {

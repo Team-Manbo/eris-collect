@@ -5,26 +5,26 @@ export interface CollectorEvents<T, V extends string | BaseCollectorEndReasons> 
      * Emitted whenever something is collected.
      * @param collected The element collected.
      */
-    collect(collected: T): any;
+    collect(collected: T): any
 
     /**
      * Emitted whenever something is disposed.
      * @param disposed The element disposed.
      */
-    dispose(disposed: any): any;
+    dispose(disposed: any): any
 
     /**
      * Emitted whenever something is ignored.
      * @param ignored The element ignored.
      */
-    ignore(ignored: T): any;
+    ignore(ignored: T): any
 
     /**
      * Emitted whenever the collector stops collecting.
      * @param collected The data collected by the collector.
      * @param reason The reason the collector has ended.
      */
-    end(collected: T[], reason: V): any;
+    end(collected: T[], reason: V): any
 }
 
 export interface CollectorOptions<T> {
@@ -41,7 +41,7 @@ export interface CollectorOptions<T> {
      * The filter applied to this collector.
      * @param colleted The collected element to filter.
      */
-    filter?(colleted: T): boolean | Promise<boolean>;
+    filter?(colleted: T): boolean | Promise<boolean>
 }
 
 interface ResetTimerOptions {
@@ -51,7 +51,7 @@ interface ResetTimerOptions {
     time?: number;
 }
 
-export type BaseCollectorEndReasons = 'time' | 'idle' | 'limit' | 'user';
+export type BaseCollectorEndReasons = 'time' | 'idle' | 'limit' | 'user'
 
 /** A base collector class to be extended from. */
 export abstract class Collector<T, V extends string = string> extends TypedEventEmitter<CollectorEvents<T, V | BaseCollectorEndReasons>> {
